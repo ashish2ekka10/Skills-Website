@@ -14,6 +14,7 @@ import { checkUserSession } from "./store/user/user.action";
 import { PrivateRoute } from "./components/PrivateRoute/privateRoute";
 import ComingSoon from "./pages/comingSoon/ComingSoon";
 import 'react-toastify/dist/ReactToastify.css';
+import AdminDashboard from "./pages/AdminDashboard/AdminDashboard";
 function App() {
   
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ function App() {
         <Route path="/register" element={<PrivateRoute><Registration /></PrivateRoute>} />
         <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>}/>
         <Route path="/coming-soon" element={<PrivateRoute><ComingSoon/></PrivateRoute>}/>
+        <Route path="/mentor-dashboard" element={<AdminDashboard/>}/>
   
       </Routes>
       <Footer />
